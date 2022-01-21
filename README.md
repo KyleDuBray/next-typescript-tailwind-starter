@@ -1,6 +1,6 @@
 # Next.js-TypeScript-Tailwind Boilerplate
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) See [From Scratch](#from-scratch) if interested in all of the commands used.
+A [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). See [From Scratch](#from-scratch) for all commands used.
 [Documentation for Typescript with Next](https://nextjs.org/docs/basic-features/typescript)
 [Documentation for Tailwind with Next](https://tailwindcss.com/docs/guides/nextjs)
 
