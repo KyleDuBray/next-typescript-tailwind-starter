@@ -40,6 +40,7 @@ npx create-next-app@latest --ts
 npm install typescript @types/react
 
 npm install -D tailwindcss postcss autoprefixer
+
 npx tailwindcss init -p
 ```
 `tailwind.config.js`:
