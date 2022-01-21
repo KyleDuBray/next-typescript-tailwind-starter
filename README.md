@@ -1,9 +1,34 @@
 # Next.js-TypeScript-Tailwind Boilerplate
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) using the `--ts`
-flag for typscript configuration. Tailwind was added by importing it using npm.
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) See [From Scratch](#from-scratch) if interested in all of the commands used.
 [Documentation for Typescript with Next](https://nextjs.org/docs/basic-features/typescript)
 [Documentation for Tailwind with Next](https://tailwindcss.com/docs/guides/nextjs)
+
+## Getting Started
+
+Install modules:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+Then, run the development server (this will also create a `tsconfig.json` file when run for the first time):
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
 ## From Scratch
 
@@ -11,17 +36,13 @@ This project was created using the following commands/files:
 
 ```bash
 npx create-next-app@latest --ts
-// to create the project
 
 npm install typescript @types/react
-// to install typescript and react types
 
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
-// Install tailwind and associated dev dependencies, followed by config files.
 ```
-
-Replace contents of `tailwind.config.js` with the following:
+`tailwind.config.js`:
 
 ```js
 module.exports = {
@@ -36,7 +57,7 @@ module.exports = {
 };
 ```
 
-Create `./styles/globals.css` file, insert:
+`./styles/globals.css`:
 
 ```css
 @tailwind base;
@@ -44,7 +65,7 @@ Create `./styles/globals.css` file, insert:
 @tailwind utilities;
 ```
 
-Create `./pages/_app.tsx` file, insert:
+`./pages/_app.tsx`:
 
 ```js
 import "../styles/globals.css";
@@ -60,7 +81,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 }
 ```
 
-Create `./pages/index.tsx` file, insert:
+`./pages/index.tsx`:
 
 ```js
 import type { NextPage } from "next";
@@ -72,7 +93,7 @@ const Home: NextPage = () => {
 export default Home;
 ```
 
-Create `components/Layout.tsx` file, insert:
+`components/Layout.tsx`:
 
 ```js
 import * as React from "react";
@@ -86,20 +107,7 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
 export default Layout;
 ```
 
-All of the above creates this starter project that is TypeScript and Tailwind ready with a "Layout" parent component structure for
-wasy creation of templated pages.
-
-## Getting Started
-
-First, install modules:
-
-```bash
-npm install
-# or
-yarn install
-```
-
-Then, run the development server (this will also create the `tsconfig.json` file when run for the first time):
+`tsconfig.json` file is created if not existing on first start:
 
 ```bash
 npm run dev
@@ -107,13 +115,6 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
 ## Learn More
 
